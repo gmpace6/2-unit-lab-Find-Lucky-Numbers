@@ -11,11 +11,14 @@
 // luckyNumbers(6)
 // // returns (1, 7, 9, 6, 5, 2)
 
-let arr = []
 
 function luckyNumbers(n) {
-    for(let i = 0; i < n; i++)
-    arr.push(Math.floor(Math.random() * 10))
-    return (arr)
+    let set = new Set()
+    while(set.size < n) {
+        set.add(Math.ceil(Math.random() * 10))
+        // OR         set.add(Math.floor(Math.random() * 10) + 1)
+    }
+    return Array.from(set)
 }
-console.log(luckyNumbers(7))
+console.log(luckyNumbers(4))
+
