@@ -1,10 +1,4 @@
 // Find Lucky Numbers
-// Difficulty
-// Easy
-
-// Concepts
-// Loops, General
-
 
 // Given a number, n, return an array containing n unique random numbers between 1-10, inclusive. (That is, do not repeat any numbers in the returned list.)
 
@@ -16,3 +10,12 @@
 // // returns (3, 7)
 // luckyNumbers(6)
 // // returns (1, 7, 9, 6, 5, 2)
+
+let arr = []
+
+function luckyNumbers(n) {
+    for(let i = 0; i < n; i++)
+    arr.push(Math.floor(Math.random() * 10))
+    return (arr)
+}
+console.log(luckyNumbers(7))
